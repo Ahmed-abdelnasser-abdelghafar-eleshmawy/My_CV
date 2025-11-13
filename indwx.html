@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed Abdelnasser — CV (1970s Style)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Playfair+Display:wght@400;700&family=IBM+Plex+Mono&display=swap');
+
+    :root {
+      --brown: #5C4033;
+      --mustard: #D4A017;
+      --olive: #6B8E23;
+      --cream: #F8F4E3;
+      --rust: #B7410E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "IBM Plex Mono", monospace;
+      background: linear-gradient(135deg, #f0e6d2 0%, #d9c8a9 100%);
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(107, 142, 35, 0.08) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(212, 160, 23, 0.07) 0%, transparent 25%);
+      color: var(--brown);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--cream);
+      border: 12px solid var(--brown);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Groovy corner flourish */
+    .container::before,
+    .container::after {
+      content: "★";
+      position: absolute;
+      font-size: 24px;
+      color: var(--mustard);
+    }
+    .container::before { top: -10px; left: -10px; }
+    .container::after { bottom: -10px; right: -10px; }
+
+    header {
+      background: var(--brown);
+      color: var(--cream);
+      padding: 25px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-family: "Press Start 2P", cursive;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: var(--mustard);
+      margin-top: 5px;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .contact-info span::before {
+      content: "• ";
+      color: var(--mustard);
+    }
+
+    .section {
+      padding: 25px 30px;
+      border-bottom: 4px dashed var(--olive);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      color: var(--rust);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--mustard);
+      letter-spacing: 2px;
+    }
+
+    .job {
+      margin-bottom: 30px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: var(--brown);
+    }
+
+    .company {
+      font-weight: bold;
+      color: var(--olive);
+      margin: 4px 0;
+    }
+
+    .date-location {
+      font-style: italic;
+      color: var(--rust);
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    li::before {
+      content: "▹";
+      color: var(--mustard);
+      position: absolute;
+      left: -18px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .skill-category {
+      margin-bottom: 20px;
+    }
+
+    .skill-category h3 {
+      color: var(--rust);
+      font-family: "Playfair Display", serif;
+      margin-bottom: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--olive);
+      color: var(--cream);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: var(--brown);
+      background: rgba(248, 244, 227, 0.7);
+      border-top: 4px solid var(--mustard);
+    }
+
+    /* Groovy border pattern */
+    .groovy-border {
+      height: 12px;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--brown),
+        var(--brown) 10px,
+        var(--mustard) 10px,
+        var(--mustard) 20px
+      );
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="groovy-border"></div>
+
+    <header>
+      <h1>AHMED ABDELNASSER</h1>
+      <div class="subtitle">SENIOR ACCOUNTANT • FINANCIAL ANALYST</div>
+      <div class="contact-info">
+        <span>an723o8@gmail.com</span>
+        <span>O1128212629</span>
+        <span>New Cairo, Egypt</span>
+        <span>linkedin.com/in/ahmed-nasser-70051a193</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>ABOUT ME</h2>
+      <p>
+        I have worked in commercial companies — local and international — for 7 years. My passion lies in financial accounting, having held key roles including <strong>Senior Accountant</strong>. Dedicated to accuracy, compliance, and strategic financial insight in dynamic environments.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+
+      <div class="job">
+        <div class="job-title">Senior Accountant</div>
+        <div class="company">Rwabet Developments</div>
+        <div class="date-location">01/2025 – Present • New Cairo, Egypt</div>
+        <ul>
+          <li>Reviewing and auditing General Ledger entries; recording daily treasury transactions and disbursements.</li>
+          <li>Analyzing internal operations, spending authorities, and customs expenses.</li>
+          <li>Bank reconciliations, internal/external transfers, and account monitoring.</li>
+          <li>Managing supplier & broker relationships: scheduling receivables, issuing checks.</li>
+          <li>Preparing analytical reports (broker, suppliers, customers, collections, banks, treasury, payments) for leadership decisions.</li>
+          <li>Reviewing GL accounts and electronic invoices on Egypt’s tax platform.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">General Accountant</div>
+        <div class="company">Sea Port for Engineering and Trading</div>
+        <div class="date-location">04/2020 – 03/2021 • Mahalla Elkobra, Egypt</div>
+        <ul>
+          <li>Posting daily treasury entries and managing disbursement accounts.</li>
+          <li>Analyzing imported invoices, customs expenses, and release certificates.</li>
+          <li>Receiving & disbursing customer checks; issuing supplier payments.</li>
+          <li>Tracking asset movements, depreciation, and accumulated depreciation.</li>
+          <li>Reviewing local VAT/withholding tax on sales & purchases.</li>
+          <li>Managing e-invoicing via Egyptian Tax Authority platform.</li>
+          <li>Monitoring supplier/customer balances and bank movements.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Financial Accountant & Bank Financial Analyst</div>
+        <div class="company">AJIAD For Import & Export</div>
+        <div class="date-location">01/2022 – 12/2023 • Mahalla Elkobra, Egypt</div>
+        <ul>
+          <li>Daily bookkeeping: expenses, revenues, treasury operations.</li>
+          <li>Customs & import invoice analysis; release documentation.</li>
+          <li>AP/AR follow-up; check & transfer management.</li>
+          <li>VAT/withholding tax compliance on local transactions.</li>
+          <li>e-Invoice system integration with Egyptian Tax Authority.</li>
+          <li>Financial analysis (customers, suppliers, tax accounts).</li>
+          <li>Admin file audit support & coordination with Chartered Accountant.</li>
+          <li>Bank statement reconciliation, balance matching, transaction logging.</li>
+          <li>Payroll & attendance tracking.</li>
+          <li>Revenue/expense analysis via cash, checks, and bank transfers.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Auditor</div>
+        <div class="company">Yasser Al-Khair Legal Accounting Office</div>
+        <div class="date-location">(Role details align with prior accounting responsibilities)</div>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Financial Service Advisor</div>
+        <div class="company">CHUBB</div>
+        <div class="date-location">03/2021 – 12/2021 • Mahalla Elkobra, Egypt</div>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Accountant</div>
+        <div class="company">Balloon and Flowers</div>
+        <div class="date-location">01/2019 – 2019 • Sharjah, UAE</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>EDUCATION</h2>
+      <div class="job">
+        <div class="job-title">Bachelor of Commerce in Accountancy</div>
+        <div class="company">Mansoura University</div>
+        <div class="date-location">06/2019 • Egypt</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>SKILLS & CERTIFICATIONS</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Core Skills</h3>
+          <div class="tags">
+            <span class="tag">Auditing</span>
+            <span class="tag">Negotiation</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Financial Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag">Arabic (Native)</span>
+            <span class="tag">English (Fluent)</span>
+            <span class="tag">German (Basic)</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Software</h3>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Peachtree</span>
+            <span class="tag">QuickBooks</span>
+            <span class="tag">Odoo</span>
+            <span class="tag">ERP Systems</span>
+            <span class="tag">Microsoft Office</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Certifications</h3>
+          <div class="tags">
+            <span class="tag">Professional Financial Accountant</span>
+            <span class="tag">IDA Academy</span>
+            <span class="tag">Edmore University</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 25px; color: var(--rust);">Courses</h3>
+      <ul>
+        <li>Sales & Business Development Program — DV Circle (2020, Mansoura)</li>
+        <li>English Language — AUC (2019, Cairo)</li>
+        <li>Business & Marketing — AUC (2019, Cairo)</li>
+      </ul>
+    </section>
+
+    <footer>
+      ✦ Crafted with <span style="color: var(--rust);">●</span> precision & groovy vibes ✦<br>
+      © 1970s Retro CV — Ahmed Abdelnasser • Est. 2025
+    </footer>
+
+    <div class="groovy-border"></div>
+  </div>
+</body>
+</html>
+
